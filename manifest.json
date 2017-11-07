@@ -1,0 +1,21 @@
+{
+  "name": "Pulsate",
+  "short_name": "Pulsate",
+  "description": "Your calendar, mesmerized",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "js": [ "blank.js" ],
+      "matches" : [
+        "https://calendar.google.com/*",
+        "https://www.google.com/calendar/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "https://www.google.com/calendar/*",
+    "https://calendar.google.com/*"
+  ]
+}
