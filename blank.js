@@ -30,12 +30,12 @@ function backgroundToRGB(backgroundColor) {
 
 function pulsate(elem) {
   var start = backgroundToRGB(elem.style.backgroundColor);
-  var colors = colorWheel(start, 40);
+  var colors = colorWheel(start, 10);
   if (!elem.interval) {
     elem.interval = setInterval(function() {
       colors.cycle();
       elem.style.backgroundColor = colors.toString();
-    }, 200);
+    }, 300);
   } else {
     clearInterval(elem.interval);
     elem.interval = undefined;
